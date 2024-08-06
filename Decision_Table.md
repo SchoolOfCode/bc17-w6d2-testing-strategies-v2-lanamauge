@@ -102,23 +102,33 @@ The shopping cart system performs the following actions based on the combination
 2. Fill in the table with the appropriate values for each combination of conditions.
 3. Ensure that all possible combinations are covered.
 
-| Conditions | Test Case 1 |
-|------------|---------|
-| Product Type |       |
-| Quantity   |         |
-| Discount Code |      |
-| Calculate Subtotal |   |
-| Apply Discount |      |
-| Calculate Tax |       |
-| Calculate Shipping |  |
-| Calculate Total |     |
-| Update Inventory |    |
-| Generate Invoice |    |
+| Conditions | Test Case 1 | Test Case 2 |Test Case 3 | Test Case 4 |
+|------------|---------|---------|---------|---------|
+| Product Type |    physical   | digital|    physical   | digital
+| Quantity   |      1   |1|      2   |2
+| Discount Code |  valid    | invalid|  valid    | invalid
+| Calculate Subtotal | ✓  |✓| ✓  |✓
+| Apply Discount |   ✓    |✗|   ✓    |✗
+| Calculate Tax |     ✓   |✗|     ✓   |✗
+| Calculate Shipping | ✓ |✗| ✓ |✗
+| Calculate Total |   ✓  |✓|   ✓  |✓
+| Update Inventory |✓    |✗|✓    |✗
+| Generate Invoice |  ✓   |✓ |  ✓   |✓ 
 
 ### Task 3: Identify Test Cases
 1. Based on the decision table, identify the test cases that need to be executed.
 2. Assign a unique identifier to each test case.
 3. Describe the purpose and expected outcome of each test case.
+
+TC1 - 1 physical product with valid discount code. Subtotal calculated, discount applied, tax calculated, shipping calculate, inventory updated, invoice generated
+
+TC2 - 1 digital product with invalid discount code. Subtotal calculated, no discount applied, no tax calculated, no shipping calculate, inventory not updated, invoice generated
+
+TC3 - 2 physical products with valid discount code. Subtotal calculated, discount applied, tax calculated, shipping calculate, inventory updated, invoice generated
+
+TC4 - 2 digital product with invalid discount code. Subtotal calculated, no discount applied, no tax calculated, no shipping calculate, inventory not updated, invoice generated
+
+
 
 ### Task 4: Discuss and Share
 1. Discuss your decision table and test cases with your group.

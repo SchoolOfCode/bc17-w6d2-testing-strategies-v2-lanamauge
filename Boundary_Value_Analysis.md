@@ -38,8 +38,8 @@ You are tasked with testing a search functionality that allows users to specify 
 
 | Boundary Values |
 |-----------------|
-|                 |
-|                 |
+|          valid: 1,2, 99, 100      |
+|           invalid: -1, 0, 101, non numeric values     |
 |                 |
 |                 |
 |                 |
@@ -51,11 +51,14 @@ You are tasked with testing a search functionality that allows users to specify 
 
 | Test Case | Input Value | Expected Result |
 |-----------|-------------|-----------------|
-|           |             |                 |
-|           |             |                 |
-|           |             |                 |
-|           |             |                 |
-|           |             |                 |
+|       1    |     1        |      1 result per page           |
+|         2  |        2     |           2 results per page      |
+|         3  |        99     |          99 results per page       |
+|        4   |         100    |             100 results per page    |
+|        5   |        -1     |     error: less than 1 result requested             |
+|        6  |        0    |      error: less than 1 result requested           |
+|        7  |        101     |        error: more than 100 results requested         |
+|        8   |        abc     |         error: invalid input        |
 
 ### Task 3: Discuss and Share
 1. Discuss your boundary values and test cases with your group.
